@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "NAV Extend",
+  "description": "Accédez rapidement aux titres d'une page via une popup conviviale.",
+  "version": "0.1.0",
+  "action": {
+    "default_title": "Afficher la navigation de la page",
+    "default_popup": "src/popup.html"
+  },
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

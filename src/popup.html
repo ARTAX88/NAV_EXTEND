@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>NAV Extend</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="popup__header">
+      <h1 class="popup__title">NAV Extend</h1>
+      <p class="popup__subtitle">
+        Choisissez un titre pour y accéder instantanément.
+      </p>
+    </header>
+
+    <main class="popup__main">
+      <label class="popup__label" for="filter">Filtrer les titres</label>
+      <input
+        id="filter"
+        class="popup__input"
+        type="search"
+        placeholder="Rechercher dans les titres de la page"
+        autocomplete="off"
+      />
+
+      <p id="popup-empty" class="popup__empty popup__empty--hidden">
+        Aucun titre pertinent n'a été trouvé sur cette page.
+      </p>
+
+      <ul id="headings" class="popup__list" role="list"></ul>
+    </main>
+
+    <footer class="popup__footer">
+      <small>
+        Cliquez sur un élément pour faire défiler la page jusqu'au titre choisi.
+      </small>
+    </footer>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
